@@ -6,6 +6,7 @@ import FilterRegion from '../btnFilterRegion/btnFilterRegion'
 import SortAlphabetic from '../sortAlpha/sortAlpha'
 import SortPop from '../sortByPop/sortByPop'
 import FilterActivity from '../btnFilterActivity/btnFilterActivity'
+import { Link } from 'react-router-dom'
 
 const Home = function () {
     
@@ -13,8 +14,8 @@ const Home = function () {
 
 if(show){
     return (
-        <div className="home" onClick={e => setShow(false)}>    
-            <Search/>
+            <div className="home" > 
+            <div onClick={e => setShow(false)}><Search /></div>   
             <ShowTenCountries/>
         </div>
     )} else {
@@ -25,6 +26,7 @@ if(show){
             <SortAlphabetic/>
             <SortPop/>
             <FilterActivity/>
+            <Link to='/showAll'>Show All</Link>
         </div>
         )
     }

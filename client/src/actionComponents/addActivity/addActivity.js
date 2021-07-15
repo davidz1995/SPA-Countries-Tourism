@@ -38,7 +38,7 @@ function AddActivity() {
       <div>
         <form>
             <label>
-                Add turistic activity:
+            <h1>Add turistic activity:</h1>
                     <input 
                         type='text' 
                         name='name'
