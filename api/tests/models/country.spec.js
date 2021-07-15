@@ -1,22 +1,44 @@
-const { Country, conn } = require('../../src/db.js');
+const { Country, Turistic_Activity, conn } = require('../../src/db.js');
 const { expect } = require('chai');
 
-describe('Country model', () => {
-  before(() => conn.authenticate()
-    .catch((err) => {
-      console.error('Unable to connect to the database:', err);
-    }));
-  describe('Validators', () => {
-    beforeEach(() => Country.sync({ force: true }));
-    describe('name', () => {
-      it('should throw an error if name is null', (done) => {
-        Country.create({})
-          .then(() => done(new Error('It requires a valid name')))
+describe('Model Testing', function() {
+ 
+  describe('Country model', function () {
+    beforeEach(async function() {
+      await Country.sync({ force: true });
+    });
+    xdescribe('Validations', function () {
+      it('No deberia crearse sin los datos completos', function(done) {
+         Country.create({
+          name: 'Argentina',
+         })
+          .then(() => done('No debería haberse creado'))
           .catch(() => done());
       });
-      it('should work when its a valid name', () => {
-        Country.create({ name: 'Argentina' });
+      it('No deberia crearse sin los datos completos', function(done) {
+        Country.create({
+          alpha3Code: 'ARG',
+        })
+        .then(() => done('No deberia haberse creado'))
+        .catch(() => done());
       });
+      it('Alpha3Code solo acepta tres caracteres', function(done) {
+        Country.create({
+          name: 'Argentina',
+          alpha3Code: 'ARGE',
+          flag: 'flag',
+          region: 'americas',
+          capital: 'Buenos aires',
+          subregion: 'america latina',
+          area: 68686868,
+          population: 2272734,
+        })
+          .then(() => done('No debería haberse creado'))
+          .catch(() => done());
+      });
+      it('Model Country deberia ser una funcion', function(){
+        expect(typeof Country).equal('function')
+      })
     });
-  });
-});
+  })
+})
