@@ -1,4 +1,5 @@
 import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 const SortAlpha = (sort) => {
     const countries = useSelector(state => state.getAll)
@@ -16,21 +17,25 @@ const SortAlpha = (sort) => {
        
         return 0;
     });
-      return(aToZ.map(auxCountry => {
+      return(
+        <div className='containerFiltered'>
+        {aToZ.map(auxCountry => {
         return (
-            <div key = {auxCountry.alpha3Code}>
+            <div className = 'countryFiltered' key = {auxCountry.alpha3Code}>
                 <img className = 'flag' src = {auxCountry.flag} alt = ''/>
-                <p >{auxCountry.name}</p>
-                <p>{auxCountry.alpha3Code}</p>
+                <p><Link to={`/countries/${auxCountry.name}`} style={{ textDecoration: 'none', color: '#000', fontSize: '12.5px' }}>{auxCountry.name}</Link></p>
+                <p><Link to={`/countries/${auxCountry.name}`} style={{ textDecoration: 'none', color: '#000', fontSize: '12.5px' }}>{auxCountry.alpha3Code}</Link></p>
+                {/* <p>{auxCountry.capital}</p>
                 <p>{auxCountry.region}</p>
                 <p>{auxCountry.subregion}</p>
-                <p>{auxCountry.capital}</p>
                 <p>{auxCountry.area}</p>
                 <p>{auxCountry.population}</p>
-                <p>{auxCountry.turisticActivities}</p>
+                <p>{auxCountry.turisticActivities}</p> */}
             </div>
         )
-    }))
+    })}
+    </div>
+    )
     }
 
     if(aux.sort === "ZtoA"){
@@ -44,21 +49,25 @@ const SortAlpha = (sort) => {
        
         return 0;
       });   
-      return(zToA.map(auxCountry => {
+      return(
+        <div className='containerFiltered'>
+        {zToA.map(auxCountry => {
         return (
-            <div key = {auxCountry.alpha3Code}>
+            <div className = 'countryFiltered' key = {auxCountry.alpha3Code}>
                 <img className = 'flag' src = {auxCountry.flag} alt = ''/>
-                <p >{auxCountry.name}</p>
-                <p>{auxCountry.alpha3Code}</p>
+                <p><Link to={`/countries/${auxCountry.name}`} style={{ textDecoration: 'none', color: '#000', fontSize: '12.5px' }}>{auxCountry.name}</Link></p>
+                <p><Link to={`/countries/${auxCountry.name}`} style={{ textDecoration: 'none', color: '#000', fontSize: '12.5px' }}>{auxCountry.alpha3Code}</Link></p>
+               {/*  <p>{auxCountry.capital}</p>
                 <p>{auxCountry.region}</p>
                 <p>{auxCountry.subregion}</p>
-                <p>{auxCountry.capital}</p>
                 <p>{auxCountry.area}</p>
                 <p>{auxCountry.population}</p>
-                <p>{auxCountry.turisticActivities}</p>
+                <p>{auxCountry.turisticActivities}</p> */}
             </div>
         )
-    }))
+    })}
+    </div>
+    )
     }
 }
 

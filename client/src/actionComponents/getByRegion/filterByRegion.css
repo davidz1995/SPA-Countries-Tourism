@@ -1,0 +1,39 @@
+.containerFiltered {
+    height: 400px;
+    display: flex;
+    overflow-x:hidden;
+    overflow-y:auto; 
+    flex-direction: column;
+    margin-top: 15px;
+    width: 250px;
+    border-left-style: solid;
+    border-left-color: #B9B9B9;
+    margin-top: none;
+}
+/* .containerFiltered::-webkit-scrollbar {
+    -webkit-appearance: none;
+} */
+
+.countryFiltered{
+    display: flex;
+    flex-direction: row;
+}
+
+.countryFiltered:hover {
+    background-color: #F0F0F0;
+}
+
+.countryFiltered img{
+    margin-top: 10px;
+    margin-right: 5px;
+    width: 20px;
+    height: 20px;
+    margin-left: -25px;
+}
+
+.countryFiltered p {
+    font-size: 12.5px;
+    padding-bottom: 3px;
+    vertical-align:initial;
+    width: 100px;
+}

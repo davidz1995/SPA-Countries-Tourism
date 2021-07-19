@@ -1,26 +1,20 @@
 import {useSelector } from 'react-redux';
-import GetCountry from '../getByName/getByName';
 import { Link } from 'react-router-dom';
 
 const FilterByActivity = (activity) => {
     const activities = useSelector(state => state.getAllActivities)
+    
     let aux = activities.filter(e => e.name === activity.activity)
-    let aux2 = []
-    //aux2.push(aux.map(e => e.countries.map(e => e.name)))
-    let aux3 = aux.map(e => e.countries)
-    let aux4 = aux3.map( e => e[0].name)
-    for(var i = 0; i < aux4.length; i++){
-        aux2.push(aux4[i])
-    }
-    //let aux3 = aux.map(e => e[0])
-    console.log(aux2)
+    let countries = aux.map(e => e.countries)
+    let names = countries[0].map(e => e.name)
+    // console.log(names)
 
-    return(aux2.map( e => {
+    return(names.map( e => {
         return(
-            <div>
-            <Link to={'/countries/'+ e}>{e}</Link>
-            </div>
-        )}))
+            <p className = 'countryFiltered' ><Link to={`/countries/${e}`} style={{ textDecoration: 'none', color: '#000', fontSize: '16px' }}>{e}</Link></p>
+            )
+        })
+    )
 }
 export default FilterByActivity
 

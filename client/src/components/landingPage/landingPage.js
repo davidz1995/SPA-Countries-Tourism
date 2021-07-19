@@ -14,10 +14,11 @@ const LandingPage = function () {
       
     return (
         <div className="landingPage">
-        <img className='bg' src={background} alt="BG img"/>      
-        <Link to = '/countries'>
-            <button className='btn'>Lets trip</button>
-        </Link>
+        <img className='bg' src={background} alt="BG img"/>
+        <div className = 'container'> 
+        <div className='text'></div>     
+        <Link to = '/countries' className='btn'>Let's explore it!</Link>
+        </div>
           </div>
     )
 }

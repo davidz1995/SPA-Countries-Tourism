@@ -7,7 +7,14 @@ const FilterActivity = () => {
     const activities = useSelector(state => state.getAllActivities)
     const [activity, setActivity] = useState('');
     const [showMenu, setShowMenu] = useState(false)
+    const [showComponent, setShowComponent] = useState(false)
     const dispatch = useDispatch()  
+
+    const handleClickBtn = (e) => {
+        setShowMenu(!showMenu)
+        setShowComponent(false)
+      }
+
 
     useEffect(()=> {
         dispatch(getAllActivities())
@@ -17,20 +24,25 @@ const FilterActivity = () => {
         event.preventDefault();
         setActivity(event.target.value)
         setShowMenu(!showMenu)
+        setShowComponent(!showComponent)
       }
     
     return (
         <div>
-            <button onClick = {e => setShowMenu(!showMenu)}>
-                Filter by activity
+            <button className='btnMenu' onClick = {handleClickBtn}>
+                Filter by Activity &#9660;
             </button>
             {showMenu ? activities.map(e => {return(
-                <button onClick = {handleClick} value={e.name}> {e.name} </button>
+                <button className='btnSubMenu' onClick = {handleClick} value={e.name}> {e.name} </button>
             )})
               :
               (null)
             } 
+            {showComponent?
             <FilterByActivity activity ={activity}/>
+            :
+            (null)
+            }
         </div>
     )
 }

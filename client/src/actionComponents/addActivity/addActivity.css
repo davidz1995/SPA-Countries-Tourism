@@ -1,0 +1,123 @@
+.containerForm{
+    position: absolute;
+    background-color: none;
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    float: right;
+    border-radius: 20px;
+    margin-top: -690px;
+    margin-left: 730px;
+    height: auto;
+    border-style: solid;
+    border-color: white;
+    border-width: 1px;
+    padding-bottom: 30px;
+}
+
+.formInput {
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 35px;
+    margin-top: 0px;
+}
+
+.formInput input {
+    width: 370px;
+    height: 30px;
+    border-style: none;
+    border-radius: 5px;
+}
+
+.formInput p{
+    font-size: 13px;
+    text-align: start;
+    color:white;
+    font-style: oblique;
+   
+    margin-bottom: 1px;
+}
+
+.btnForm{
+    margin-top: 10px;
+    width: 150px;
+    padding: 15px 30px 15px 30px;
+    border-radius: 30px;
+    border-style: none;
+    background-color: white;
+    font-size: 15px;
+}
+
+.btnForm:hover{
+    border-style: solid;
+    border-color: white;
+    background: none;
+    color: white;
+}
+
+h1{
+    
+    color: white;
+    font-style: oblique;
+    margin-bottom: 10px;
+}
+
+.selectSeason{
+    background-color: white;
+    border-style: none;
+    width: 373px;
+    height: 30px;
+    border-radius: 5px;
+    color:dimgrey;
+}
+
+.bgform {
+    width: 100%;
+    height: auto;
+    filter: brightness(80%);
+}
+
+.containerSup{
+    display: flex;
+    flex-direction: row;
+}
+
+.containerTextForm{
+    position: absolute;
+    margin-top: -660px;
+    margin-left: 60px;
+    text-align: left;
+    font-size: 30px;
+    color: white;
+    font-style: oblique;
+    width: 550px;
+}
+
+.option{
+    padding-top: 4px;
+    
+}
+
+.option:hover{
+    background-color: rgba(61, 201, 226, 0.267);
+}
+
+.selectCountry{
+    margin-left: -40px;
+    width: 375px;
+    border-style: none;
+    border-radius: 5px;
+    height: 120px;
+    margin-top: 5px;
+}
+
+.placeholderCountry{
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.p{
+    margin-left: -35px;
+}
+

@@ -1,0 +1,11 @@
+.btnGoHome {
+    background-color: transparent;
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    border-style: none;
+}
+
+.btnGoHome p{
+    margin-top: 6px;
+}

@@ -1,0 +1,82 @@
+.containerTestCountry {
+    margin-top: -710px;
+    text-align: left;
+    margin-left: 290px;
+    height: 400px;
+    overflow-x:hidden;
+    overflow-y:auto; 
+    width: 290px;
+}
+
+.containerTestCountry p{
+    font-size: 20px;
+    font-style: oblique;
+    width: 250px;
+}
+
+.detailContainer{
+    display: flex;
+    flex-direction: row;
+    margin-left: 80px;
+    margin-top: 50px;
+}
+
+.detailContainer img {
+    margin-top: -500px;
+    margin-left: 75px;
+}
+
+.bgCountry{
+    width: 100%;
+    height: auto;
+}
+
+.goHome{
+    position:absolute;
+    display: flex;
+    margin-top: -700px;
+    margin-left: 70px;
+    background-color: white;
+    border-radius: 50px;
+    box-shadow: -10px 10px 5px rgba(66, 66, 66, 0.411);
+}
+
+.btnAddActivity{
+    position: absolute;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    background-color: none;
+    padding: 15px 20px 18px 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-left: 755px;
+    margin-top: -280px;
+}
+
+.btnAddActivity:hover{
+    background-color: #F7DB30;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+}
+
+.line{
+    display: flex;
+    flex-direction: row;
+}
+
+.prop{
+    font-weight: bold;
+}
+
+.footer{
+    margin-top: -30px;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: oblique;
+}
+
+.pActivity p {
+    font-size: 16px;
+}

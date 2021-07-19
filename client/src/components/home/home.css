@@ -1,0 +1,79 @@
+.navBar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.navBarFirst {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
+    margin-bottom: -2px;
+}
+
+.navBarFirst p{
+    margin-right: 650px;
+    font-size: 21px;
+    font-weight: bold;
+    font-style: oblique;
+    margin-top: 13px;
+    margin-bottom: -10px;
+
+}
+
+.navBarFirst div {
+    margin-right: 5px;
+    margin-top: 5px;
+}
+
+.subNavBar {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    text-align: center;
+    justify-content: center;
+    padding:15px 0 15px 0px;
+    margin-top: -10px;
+    margin-right: 40px;
+    margin-left: -30px;
+}
+
+.subNavBar div{
+    margin-left: 30px;
+    margin-bottom: -5px;
+}
+
+.containerSearchHome{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: 10px;
+    margin-right: 75px;
+    margin-bottom: 15px;
+}
+
+.bg2{
+    margin-top: 5px;
+    width: 100%;
+    height: 490px;
+    filter: brightness(60%);
+}
+
+.search2 {
+    display: flex;
+    flex-direction:column;
+    position: absolute;
+    margin-top: -430px;
+    margin-left: 150px;
+    width: 300px;
+    color: white;
+    font-size: 20px;
+}
+
+.linkShowAll{
+    padding-top: 10px;
+    padding-right: 20px;
+}

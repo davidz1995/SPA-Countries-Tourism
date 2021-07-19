@@ -1,0 +1,151 @@
+.containerDet{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    flex-direction: row;
+    margin-bottom: 40px;
+}
+
+.countryDet p {
+    font-weight: bold;
+    font-style: oblique;
+    width: 400px;
+}
+
+.containerDet p:hover {
+font-size: 18px;
+}
+
+.containerDet{
+    margin-bottom: 2px;
+}
+
+.titleDetail{
+    margin-bottom: -5px;
+    margin-top: -3px;
+    text-align: start;
+    width: 100%;
+    background-color: black;
+    padding: 5px 0 5px;
+}
+
+.pageNumbers{
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.num{
+    padding: 0 10px 0 10px;
+    
+}
+
+.loadmore{
+    margin-bottom: 30px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    font-style: oblique;
+    border-style: none;
+    height: 50px;
+    width: 200px;
+}
+
+.loadmore:hover{
+    font-size: 17px;
+}
+
+.num button{
+    background-color: white;
+    border-style: none;
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    font-style: oblique;
+    margin-top: 5px;
+}
+
+.num button:hover{
+    background-color: #E6E6E6;
+    cursor:pointer;
+}
+
+.btnPrevNext{
+    background-color: white;
+    border-style: none;
+    font-size: 27px;
+    margin-bottom: 2px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    font-weight:bold;
+}
+
+.btnPrevNext:hover{
+    background-color: black;
+    color: white;
+}
+
+.btnPrevNext p{
+    margin-top: -1px;
+}
+
+.btnTP{
+    background-color: white;
+    border-style: none;
+    font-weight: bold;
+    font-size: 25px;
+    width: 40px;
+    height: 40px;
+}
+
+.btnTP:hover{
+    background-color: #E6E6E6;
+    cursor:pointer;
+    border-radius: 50px;
+}
+
+.navTitle{
+    display: flex;
+    flex-direction: row;
+}
+
+.back{
+    position: absolute;
+    margin-top: 45px;
+    margin-left: 10px;
+}
+
+.contSubPagination{
+  display: flex;
+  flex-direction: column;
+}
+
+.btnPagination{
+    background-color: white;
+    color: black;
+    border-style: none;
+    margin-top: 8px;
+    font-size: 14px;
+    font-style: oblique;
+    border-right-color: black;
+    border-right-style: solid;
+    display: flex;
+    flex-direction: column;
+}
+
+.btnPagination:hover{
+    
+    font-weight: bold;
+}
+
+.btnSubPagination{
+    background-color: white;
+    border-style: none;
+    font-style: oblique;
+    margin-top: 5px;
+    font-size: 15px;
+}
+
+.btnSubPagination:hover{
+    background-color: #F3F3F3;
+}

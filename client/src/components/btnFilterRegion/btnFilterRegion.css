@@ -1,0 +1,36 @@
+.btnMenu{
+    background-color: white;
+    border-style: none;
+    font-size: 15px;
+    width:250px;
+    height: 50px;
+    margin-bottom: -15px;
+    font-style: oblique;
+}
+
+.btnSubMenu{
+    font-style: oblique;
+    font-size: 14px;
+    background-color: #EDEBEB;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-style:solid;
+    margin-top: 17px;
+    width:125px;
+    height: 30px;
+    border-left-color: black;
+    border-right-color: white;
+    border-top-color: white ;
+    border-bottom-color: white ;
+}
+
+.btnMenu:hover{
+    font-size: 17px;
+    background-color: #EDEBEB;
+}
+
+.btnSubMenu:hover{
+    font-size: 17px;
+    background-color: #EDEBEB;
+}

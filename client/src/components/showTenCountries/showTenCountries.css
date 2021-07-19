@@ -1,0 +1,23 @@
+
+.cont {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 400px;
+    overflow-x:auto;
+    overflow-y:hidden; 
+    margin-bottom: -50px;
+  }
+  
+.country {
+    display: flex;
+    flex-direction: column;
+    margin: 30px;  
+  }
+
+  .country p {
+    font-size: 13px;
+    font-weight: bold;
+    font-style: oblique;
+  }
+

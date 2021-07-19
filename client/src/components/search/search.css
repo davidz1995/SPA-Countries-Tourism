@@ -1,0 +1,42 @@
+.textSearch{
+    background-color: #DADADA;
+    border-style: none;
+    width: 15rem;
+    height: 2rem;
+    border-radius: 15px;
+    display: flex;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.containerSearch {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.containerSearch div{
+    background-color: #5DA863;
+    border-style: none;
+    border-radius: 50px;
+    width:  33px;
+    height: 33px;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 0px;
+}
+
+.btnSearch {
+    background-color: #5DA863;
+    border-style: none;
+    border-radius: 50px;
+    width:  33px;
+    height: 33px;
+    text-align: center;
+    font-size: 16px;
+    color: white;
+}
+
+.btnSearch:hover {
+    background-color: gray;
+}

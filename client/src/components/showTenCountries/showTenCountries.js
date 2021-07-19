@@ -12,15 +12,18 @@ function ShowTenCountries(){
     dispatch(getTenCountries())
      },[dispatch]) 
 
-    return(tenCountries.map(country => {
+    return(
+        <div className='cont'>
+        {tenCountries.map(country => {
         return (
-            <div>
-                <img className = 'flag' src = {country.flag} alt = ''/>
-                <p>{country.name}</p>
-                <p>{country.region}</p>
-            </div>
+                <div className='country'>
+                <img className = 'flag' src = {country.flag} alt = '' width = '300' height = '200'/>
+                <p>Name: {country.name}</p>
+                <p>Region: {country.region}</p>
+                </div>  
+        )})}
+        </div>
         )
-    }))
-    }
+}
 
 export default ShowTenCountries;
