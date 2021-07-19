@@ -17,20 +17,21 @@ class ActivityModel extends ModelCrud {
 
     add = async (req, res, next) => {
         const { name, difficulty, term, season, country } = req.body
-        const createTuristicActivity = await this.model.create({
-            name,
-            difficulty,
-            term,
-            season
+    const createActivity = await this.model.create({
+        name,
+        difficulty,
+        term,
+        season,
+    });
+    const modelCountry= await Country.findAll({
+        where: {
+            name: {
+                [Op.in]: Array.isArray(country) ? country : [country]
             }
-        );
-        const modelCountry= await Country.findAll({
-            //include: {model: this.model},
-            where: { name: { [Op.iLike]: `%${country}%` } 
         } 
     });
-    await createTuristicActivity.setCountries(modelCountry);
-    res.send(createTuristicActivity)
+    await createActivity.setCountries(modelCountry);
+    res.send(createActivity)
     }
 
      getByName = async (req, res, next) => {
