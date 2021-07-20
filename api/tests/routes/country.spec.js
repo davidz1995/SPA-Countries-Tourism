@@ -5,14 +5,14 @@ const { Country, Activity, conn } = require("../../src/db")
 
 const agent = session(app)
 
-describe("Country routes", () => {
+xdescribe("Country routes", () => {
   before(() =>
     conn.authenticate().catch((err) => {
       console.error("Can't reach DB", err)
     })
   )
 
-xdescribe('/countries', function() {
+describe('/countries', function() {
   it('GET responde con un status 200', function(){
     return agent
       .get('/countries')
@@ -38,7 +38,7 @@ xdescribe('/countries', function() {
   }).timeout(10000)
 })
 
-xdescribe('/countries?name=', function() {
+describe('/countries?name=', function() {
   it('GET responde con status 200 si encuentra un pais',  async function() {
     return await agent 
       .get('/countries?name=ARG') 
@@ -69,7 +69,7 @@ xdescribe('/countries?name=', function() {
   }).timeout(10000)
 })
 
-xdescribe('/countries:name', function() {
+describe('/countries:name', function() {
   it('GET responde con status 200 si encuentra un pais',  async function() {
     return await agent 
       .get('/countries/ECU') 
