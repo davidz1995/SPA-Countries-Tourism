@@ -16,8 +16,8 @@ const LandingPage = function () {
         <div className="landingPage">
         <img className='bg' src={background} alt="BG img"/>
         <div className = 'container'> 
-        <div className='text'></div>     
-        <Link to = '/countries' className='btn'>Let's explore it!</Link>
+        <div className='text'>Countrie's App</div>     
+        <Link to = '/countries' className='btn'>Enter</Link>
         </div>
           </div>
     )

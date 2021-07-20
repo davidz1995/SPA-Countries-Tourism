@@ -1,50 +1,127 @@
 import React from 'react';
-import { render } from '@testing-library/react';
-import { configure } from 'enzyme';
-import AddActivity from './actionComponents/addActivity/addActivity';
+import { MemoryRouter } from 'react-router-dom'
+import configureStore from 'redux-mock-store';
+import { Provider } from 'react-redux';
+import thunk from "redux-thunk" 
+
+import  App  from './App';
+import Pagination from './actionComponents/pagination/pagination';
+
+import Enzyme, {mount} from 'enzyme';
 import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
 
-configure({adapter: new Adapter()});
+Enzyme.configure({ adapter: new Adapter() });
 
-describe('<AddActivity /> Mounted', () => {
-  
-  it('El formulario debe tener un h1 que diga: "Add turistic activity:"', () => {
-      const { container } = render(<AddActivity />)
-      const element = container.querySelectorAll('h1')[1]
-      expect(element.innerHTML).toBe("Add turistic activity:");
+describe('App', () => {
+  let store
+  const middlewares = []
+  const mockStore = configureStore(middlewares, thunk);
+
+  beforeEach(() => {
+    store = mockStore([]);
   });
 
-  it('El formulario debe tener un input con name "name" y type "text"', () => {
-      const { container } = render(<AddActivity />)
-      const element = container.querySelectorAll('input')[0]
-     expect(element.type).toBe('text');
-     expect(element.name).toBe('name');
-  });
 
-  it('El formulario debe tener un input con name "difficulty" y type "text"', () => {
-    const { container } = render(<AddActivity />)
-    const element = container.querySelectorAll('input')[1]
-    expect(element.type).toBe('text');
-    expect(element.name).toBe('difficulty');
-  });
 
-  it('El formulario debe tener un input con name "term" y type "text"', () => {
-    const { container } = render(<AddActivity />)
-    const element = container.querySelectorAll('input')[2]
-    expect(element.type).toBe('text');
-    expect(element.name).toBe('term');
-  });
+  xdescribe('Pagination', () => {
 
-  it('El formulario debe tener un input con name "season" y type "text"', () => {
-    const { container } = render(<AddActivity />)
-    const element = container.querySelectorAll('option')[1]
-    expect(element.value).toBe('Summer');
-  });
+    it('El componente Pagination debe renderizar en la ruta /showAll', () => {
+      const container = mount(
+        <Provider store={store}>
+          <MemoryRouter initialEntries={[  '/showAll' ]}>
+            <App/>
+          </MemoryRouter>
+        </Provider>
+      );
+      expect(container.find(Pagination)).toHaveLength(1);
+    });
 
-  it('El formulario debe tener un input con name "country" y type "text"', () => {
-    const { container } = render(<AddActivity />)
-    const element = container.querySelectorAll('input')[3]
-    expect(element.type).toBe('text');
-    expect(element.name).toBe('country');
+    it('El componente Pagination debe renderizar un title(h1) que diga Countries', () => {
+      const container = mount(
+        <Provider store={store}>
+          <MemoryRouter initialEntries={[  '/showAll' ]}>
+            <App/>
+          </MemoryRouter>
+        </Provider>
+      );
+      expect(container.find('h1')).toHaveLength(1);
+    });
+
+    it('El componente Pagination debe renderizar un button que filtre por population', () => {
+      const container = mount(
+        <Provider store={store}>
+          <MemoryRouter initialEntries={[  '/showAll' ]}>
+            <App/>
+          </MemoryRouter>
+        </Provider>
+      );
+      expect(container.find('button')).toHaveLength(6);
+    });
+
+    it('El componente Pagination debe renderizar un button que ordene por orden alfabetico', () => {
+      const container = mount(
+        <Provider store={store}>
+          <MemoryRouter initialEntries={[  '/showAll' ]}>
+            <App/>
+          </MemoryRouter>
+        </Provider>
+      );
+      expect(container.find('button')).toHaveLength(6);
+    });
+
+    it('El componente Pagination debe renderizar un button que ordene por orden de poblacion', () => {
+      const container = mount(
+        <Provider store={store}>
+          <MemoryRouter initialEntries={[  '/showAll' ]}>
+            <App/>
+          </MemoryRouter>
+        </Provider>
+      );
+      expect(container.find('button')).toHaveLength(6);
+    });
+
+    it('El componente Pagination debe renderizar un button que avance a la siguiente pagina', () => {
+      const container = mount(
+        <Provider store={store}>
+          <MemoryRouter initialEntries={[  '/showAll' ]}>
+            <App/>
+          </MemoryRouter>
+        </Provider>
+      );
+      expect(container.find('button')).toHaveLength(6);
+    });
+
+    it('El componente Pagination debe renderizar un button que avance a la regrese a la pagina anterior', () => {
+      const container = mount(
+        <Provider store={store}>
+          <MemoryRouter initialEntries={[  '/showAll' ]}>
+            <App/>
+          </MemoryRouter>
+        </Provider>
+      );
+      expect(container.find('button')).toHaveLength(6);
+    });
+
+    it('El componente Pagination debe renderizar un button que cargue mas paises a la lista', () => {
+      const container = mount(
+        <Provider store={store}>
+          <MemoryRouter initialEntries={[  '/showAll' ]}>
+            <App/>
+          </MemoryRouter>
+        </Provider>
+      );
+      expect(container.find('button')).toHaveLength(6);
+    });
+
+    it('El componente Pagination debe renderizar 10 paises en la pantalla principal', () => {
+      const container = mount(
+        <Provider store={store}>
+          <MemoryRouter initialEntries={[  '/showAll' ]}>
+            <App/>
+          </MemoryRouter>
+        </Provider>
+      );
+      expect(container.find('div')).toHaveLength(9);
+    });
   });
 });

@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { getAll } from "../../store/actions/actions";
 
 function AddActivity() {
+
     let acc =[]
     const dispatch = useDispatch()
     const countries = useSelector(state => state.getAll)
