@@ -2,7 +2,7 @@
 - [ ] React
 - [ ] Redux
 - [ ] Express
-- [ ] Sequelize - Postgres
+- [ ] Sequelize - PostgreSQL
 
 #### Frontend
 
